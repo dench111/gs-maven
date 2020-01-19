@@ -11,7 +11,7 @@ pipeline {
                 def workspace = "/var/lib/jenkins/workspace/JavaProject_Pipeline/initial"
                 sh "chmod ugo+rwx $workspace/*"
                }
-                sh 'mvn compile'
+                sh 'mvn compile -f /var/lib/jenkins/workspace/JavaProject_Pipeline/initial'
             }
         }
     }
