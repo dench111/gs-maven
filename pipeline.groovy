@@ -14,6 +14,7 @@ pipeline {
                 sh "export JRE_HOME=/usr/lib/jvm/java-8-openjdk-i386/jre/bin/java"
                }
                 sh 'mvn compile -f /var/lib/jenkins/workspace/JavaProject_Pipeline/initial'
+                sh 'mvn package'
             }
         }
     }
