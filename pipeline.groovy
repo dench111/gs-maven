@@ -8,7 +8,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'mvn compile -f /var/lib/jenkins/workspace/JavaProject_Pipeline/initial'
-                sh 'mvn package'
+                sh 'mvn package -f /var/lib/jenkins/workspace/JavaProject_Pipeline/initial'
             }
         }
     }
