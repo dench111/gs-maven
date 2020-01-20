@@ -13,7 +13,8 @@ pipeline {
         }
            stage('execute jar') {
               steps {
-              sh 'java -jar target/gs-maven-0.1.0.jar'
+              sh 'chmod ugo+rwx /var/lib/jenkins/workspace/JavaProject_Pipeline/initial/target/gs-maven-0.1.0.jar'
+              sh 'java -jar /var/lib/jenkins/workspace/JavaProject_Pipeline/initial/target/gs-maven-0.1.0.jar'
            }
         }
     }
